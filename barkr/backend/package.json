@@ -2,11 +2,27 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "models.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js",
+    "db:init": "dropdb --if-exists project_dog_db && createdb project_dog_db",
+    "db:reset": "node ./scripts/resetDb.js",
+    "db:seed": "node ./scripts/seedDb.js",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm start"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "pg": "^7.8.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "sequelize": "^4.42.0"
+  }
 }
