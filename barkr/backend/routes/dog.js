@@ -31,7 +31,12 @@ const {Dog} = require('../models');
 // PUT(edit) one dog
 
  dogRouter.put('/:id', async (req, res) => {
-
+      const result = await Dog.update(req.body,{
+        where:{
+          id:req.params.id
+        }
+      })
+   res.json({message:"The dog has been edited"})
 })
 
 // DELETE one dog
