@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import {Redirect} from "react-router-dom"
 
-class  UpdateDogProfile extends Component  {
+class  HomePage extends Component  {
   constructor(){
     super(); 
   }
@@ -17,4 +17,4 @@ class  UpdateDogProfile extends Component  {
 }
 
 
-export default UpdateDogProfile;
+export default HomePage;
