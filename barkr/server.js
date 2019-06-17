@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const {dogRouter} = require('./routes/dog.js');
+const {dogRouter} = require('./routes/dog');
 const cors = require('cors');
 
 
