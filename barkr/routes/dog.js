@@ -1,7 +1,7 @@
 const express = require('express')
 
 const  dogRouter = express.Router()
-const {Dog} = require('../models');
+const {Dog} = require('../Models/models');
 // dog routes here
 
  dogRouter.get('/', async (req, res) => {

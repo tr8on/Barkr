@@ -1,6 +1,6 @@
 const {
   db
-} = require('../models');
+} = require('../Models/models');
 
 const main = async () => {
   await db.sync({
