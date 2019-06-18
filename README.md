@@ -5,7 +5,7 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1: Friday, June 14| Project Description / Wireframes / Priority Matrix / Functional Components | Complete
-|Day 2: Monday, June 17| Database and Tables / Render Data  | complete
+|Day 2: Monday, June 17| Database and Tables / Render Data  | Complete
 |Day 3: Tuesday, June 18| Render Data onto Each Component / Styling | Incomplete
 |Day 4: Wednesday, June 19| Styling | Incomplete
 |Day 5: Thursday, June 20| Post MVP  | Incomplete
