@@ -1,7 +1,9 @@
 const express = require('express')
 
+
 const  dogRouter = express.Router()
 const {Dog} = require('../Models/models');
+const {Owner} = require('../Models/models');
 // dog routes here
 
  dogRouter.get('/', async (req, res) => {
@@ -11,20 +13,40 @@ const {Dog} = require('../Models/models');
     })
  
 });
+dogRouter.get('/owners', async (req, res) => {
+     const owner = await Owner.findAll()
+     res.json({
+          owner: owner
+     })
+  
+ });
 
 // GET one dog
- dogRouter.get('/:id', async (req, res) => {
+dogRouter.get('/:id', async (req, res) => {
     const dog = await  Dog.findByPk(req.params.id)
     res.json({
          dog
     })
 });
 
+dogRouter.get('/owner/:id', async (req, res) => {
+     const owner = await  Owner.findByPk(req.params.id)
+     res.json({
+          owner
+     })
+ });
+ 
+
 // POST one dog
- dogRouter.post('/', async (req, res) => {
+ dogRouter.post('/owner/:id', async (req, res) => {
     const  newdog = await  Dog.create(req.body)
+//     console.log('dog:', newdog)
+    const owner = await Owner.findByPk(req.params.id)
+    console.log('owner', owner)
+    const updateDog = await newdog.setOwner(owner)
+//     console.log(updateDog)
     res.json({
-         newdog: newdog
+         newdog: updateDog
     })
 })
 
@@ -62,4 +84,5 @@ const {Dog} = require('../Models/models');
 
 module.exports  = {
      dogRouter
+     
 }

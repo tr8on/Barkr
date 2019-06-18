@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import {Redirect, Link} from "react-router-dom"
 
+
 class  ShowDogProfile extends Component  {
   constructor(){
     super(); 
@@ -40,7 +41,8 @@ class  ShowDogProfile extends Component  {
         <div> Zipcode: {doggyToShow.zipcode}</div>
         <Link to={`/dog/${doggyToShow.id}/edit`}> edit </Link>
         <button onClick={this.handleDelete}> delete</button>
-        
+
+              
       </div>
     );
   }
