@@ -5,7 +5,8 @@ const db = new Sequelize( {
   dialect: "postgres",
   define: {
     underscored: true,
-    returning: true
+    returning: true,
+    timestamps: false
   }
 });
 
@@ -16,7 +17,7 @@ const  Dog = db.define("dogs", {
     age: Sequelize.INTEGER,
     breed: Sequelize.STRING,
     gender: Sequelize.STRING,
-    description: Sequelize.STRING
+    description: Sequelize.TEXT
     
   });
 
