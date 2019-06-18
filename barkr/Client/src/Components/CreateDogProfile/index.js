@@ -10,7 +10,7 @@ class  CreateDogProfile extends Component  {
         breed: "",
         gender: "",
         zipcode: "",
-        age: "",
+        age: null,
         description: "",
         redirect: false
     }
@@ -30,7 +30,8 @@ class  CreateDogProfile extends Component  {
     
       async handleSubmit(event){
         event.preventDefault();
-        await axios.post("/Dogs/", {
+       
+        await axios.post(`http://localhost:4567/dogs/`, {
           name: this.state.name,
           description: this.state.description,
           breed: this.state.breed,
@@ -46,7 +47,7 @@ class  CreateDogProfile extends Component  {
       render(){
         return (
           <div> 
-            {this.state.redirect ? <Redirect to="/"/>: null}
+            {this.state.redirect ? <Redirect to="/dogs"/>: null}
             <form 
             onChange={this.handleChange} 
             onSubmit={this.handleSubmit}
@@ -57,19 +58,42 @@ class  CreateDogProfile extends Component  {
                 placeholder="name of dog"
                 value={this.state.name}
               />
+              <br/>
               <input
                 name="description"
                 type="textarea"
                 placeholder="give a description"
                 value={this.state.description}
                 />
+                <br/>
                 <input
-                  name="rating"
-                  type="number"
-                  placeholder="give it a rating"
-                  value={this.state.rating}
+                  name="gender"
+                  type="text"
+                  placeholder="give it a gender"
+                  value={this.state.gender}
                 />
-                <br />
+                <br/>
+                <input
+                  name="breed"
+                  type="text"
+                  placeholder="give it a breed"
+                  value={this.state.breed}
+                />
+                <br/>
+                <input
+                  name="zipcode"
+                  type="string"
+                  placeholder="give it a zipcode"
+                  value={this.state.zipcode}
+                />
+                <br/>
+                <input
+                  name="age"
+                  type="number"
+                  placeholder="give it a age"
+                  value={this.state.age}
+                />
+                <br/>
                 <input type="submit"
                 />
     
