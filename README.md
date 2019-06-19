@@ -6,8 +6,8 @@
 |---|---| ---|
 |Day 1: Friday, June 14| Project Description / Wireframes / Priority Matrix / Functional Components | Complete
 |Day 2: Monday, June 17| Database and Tables / Render Data  | Complete
-|Day 3: Tuesday, June 18| Render Data onto Each Component / Styling | Incomplete
-|Day 4: Wednesday, June 19| Styling | Incomplete
+|Day 3: Tuesday, June 18| Render Data onto Each Component | Complete
+|Day 4: Wednesday, June 19| Create a functional Homepage / Styling | Incomplete
 |Day 5: Thursday, June 20| Post MVP  | Incomplete
 |Day 6: Friday June 21| Present | Incomplete
 
@@ -21,7 +21,6 @@ We are going to creat an app called 'Barkr'. It is a doggy dating app!
 ![screen shot 2019-06-15 at 4 23 11 pm](https://media.git.generalassemb.ly/user/20229/files/61893700-90df-11e9-94fe-17faf34599d7)
 ![screen shot 2019-06-15 at 4 15 30 pm](https://media.git.generalassemb.ly/user/20229/files/63eb9100-90df-11e9-96bb-ea552f5cedd0)
 ![screen shot 2019-06-15 at 4 16 10 pm](https://media.git.generalassemb.ly/user/20229/files/64842780-90df-11e9-879e-de836ee61ca5)
-
 
 ## Priority Matrix
 
@@ -67,10 +66,10 @@ https://res.cloudinary.com/rubenvelez23/image/upload/v1560739947/IMG_5232_xgyvn8
 - Database with two tables (dogs and owners) !COMPLETED!
 - HomePage
 - DogList
-- Dog Profile
-- Register Dog
-- Update Dog
-- Delete Dog
+- Dog Profile !COMPLETED!
+- Register Dog !COMPLETED!
+- Update Dog !COMPLETED!
+- Delete Dog !COMPLETED!
 - Good Design
 
 #### PostMVP:
