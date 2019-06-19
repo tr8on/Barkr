@@ -14,6 +14,7 @@ class  ShowDogProfile extends Component  {
   }
   async componentDidMount(){
     const res = await axios.get(`http://localhost:4567/dogs/${this.props.match.params.id}`)
+    console.log(res)
   const dog = res.data.dog
   console.log(dog)
   this.setState({

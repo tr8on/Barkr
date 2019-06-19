@@ -21,13 +21,33 @@ dogRouter.get('/owners', async (req, res) => {
   
  });
 
-// GET one dog
-dogRouter.get('/:id', async (req, res) => {
-    const dog = await  Dog.findByPk(req.params.id)
-    res.json({
-         dog
+ dogRouter.get('/:gender', async (req, res, next) => {
+      if(req.params.gender === "Male" || req.params.gender === "Female"){
+     const  dogs = await  Dog.findAll({
+          where:{
+        gender:req.params.gender
+      }
+      
     })
+    console.log(req.params.gender)
+     res.json({
+          dogs: dogs
+     })}
+     else{
+          next()
+     }
 });
+
+ dogRouter.get('/:id', async (req, res) => {
+     const dog = await  Dog.findByPk(req.params.id)
+     console.log(req.params.id)
+     res.json({
+          dog: dog
+     })
+ });
+ 
+
+// GET one dog
 
 dogRouter.get('/owner/:id', async (req, res) => {
      const owner = await  Owner.findByPk(req.params.id)

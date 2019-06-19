@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import {Redirect} from "react-router-dom"
+import {Link, Redirect} from "react-router-dom"
 
 class  HomePage extends Component  {
   constructor(){
@@ -11,7 +11,9 @@ class  HomePage extends Component  {
   render(){
     return (
       <div>
-        <button to="/ShowDogList">Male</button> <button>Female</button>
+         
+        <Link to="/dogs/MaleList"><button >Male</button> </Link>
+        <Link to="/dogs/FemaleList"><button >Female</button> </Link>
       </div>
     );
   }
