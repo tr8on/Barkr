@@ -7,6 +7,8 @@ import AboutPage from "./Components/AboutPage/index";
 import ShowDogProfile from "./Components/showDogProfile/index";
 import CreateDogProfile from "./Components/CreateDogProfile/index";
 import UpdateDogProfile from "./Components/UpdateDogProfile/index";
+import MaleList from "./Components/MaleList/index";
+import FemaleList from "./Components/FemaleList/index";
 class App extends Component {
   render() {
     return (
@@ -24,6 +26,8 @@ class App extends Component {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/Dogs/" component={ShowDogList} />
           <Route exact path="/Dog/create" component={CreateDogProfile} />
+          <Route exact path="/Dogs/MaleList" component={MaleList} />
+          <Route exact path="/Dogs/FemaleList" component={FemaleList} />
           <Route exact path="/Dog/:id" component={ShowDogProfile} />
           <Route exact path="/Dog/:id/edit" component={UpdateDogProfile} />
           <Route exact path="/About" component={AboutPage} />
