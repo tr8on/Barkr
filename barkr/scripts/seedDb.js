@@ -37,6 +37,12 @@ const main = async () => {
 		email: "ricks212@fakemail.com"
 	})
 	
+	const maleList = await Dog.findAll({
+        where:{
+            gender: "male"
+		}
+	})
+		
 	 await dog1.setOwner(owner1);
 	 await dog2.setOwner(owner2);
 	 
