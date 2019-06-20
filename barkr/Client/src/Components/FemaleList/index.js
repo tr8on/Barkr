@@ -26,10 +26,7 @@ class  FemaleList extends Component  {
 
     return (
       <div className="container">
-        <br></br>
-        <br></br>
-        <br></br>
-        <div className="register"><Link to='dog/create'> Register A Dog </Link></div>
+       <div className="register"><button className="add"><Link to='/dog/create'> <img src="https://img.icons8.com/ios/50/000000/plus-filled.png"/></Link></button></div>
         <div className="row">
           {this.state.dogsToShow.map ( (dog) => (
           <Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>

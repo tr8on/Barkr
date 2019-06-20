@@ -73,6 +73,7 @@ class CreateDogProfile extends Component {
 
   render() {
     return (
+      <div className="container">
       <div>
         <div>
           <select value={this.state.currentOwner} onChange={this.setOwner}>
@@ -132,6 +133,7 @@ class CreateDogProfile extends Component {
           <br />
           <input type="submit" />
         </form>
+      </div>
       </div>
     );
   }
