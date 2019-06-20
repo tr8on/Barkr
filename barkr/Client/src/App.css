@@ -14,14 +14,14 @@ body {
 }
 #main > aside2,
 #main > aside {
-  flex: 0 0 20vw;
-  background: #a25f4b;
+  flex: 0 0 5vw;
+  background: #2b1307;
 }
 #main > aside2 {
   order: -1;
 }
 header, footer, article, aside2, aside {
-  padding: 1em;
+  padding: 0;
 }
 header, footer {
   background: white;
@@ -92,4 +92,9 @@ li a:hover:not(.active) {
 .footer-link:hover {
   color: #a25f4b;
 }
-
+.homepage{
+  background-image:url("./Images/dog_paw_lies_112849_3840x2160.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
