@@ -3,6 +3,8 @@ import axios from "axios";
 import {Link} from "react-router-dom"
 import "./dogList.css"
 import Box from "../DogBox/index"
+import ShowDogList from '../ShowDogList';
+import ShowDogProfile from '../showDogProfile';
 // const MaleList = require('bootstrap')
 
 class  MaleList extends Component  {
@@ -39,7 +41,7 @@ class  MaleList extends Component  {
    
 
     return (
-      <div class="container">
+      <div className="container">
       <div className="row">
           {this.state.dogsToShow.map ( (dog) => (
             <div className="box-container"><Box name={dog.name} breed={dog.breed} age={dog.age}></Box></div>
