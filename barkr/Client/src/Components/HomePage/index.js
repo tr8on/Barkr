@@ -10,8 +10,10 @@ class  HomePage extends Component  {
   render(){
     return (
       <div className="homepage">
-        <Link to="/dogs/MaleList"><button >Male</button> </Link>
-        <Link to="/dogs/FemaleList"><button >Female</button> </Link>
+       <div className="homepage-links">
+        <Link to="/dogs/MaleList"><button className="main-button-male" >Male</button> </Link>
+        <Link to="/dogs/FemaleList"><button className="main-button-female" >Female</button> </Link>
+       </div>
       </div>
     );
   }
