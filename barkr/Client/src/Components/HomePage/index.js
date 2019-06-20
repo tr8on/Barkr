@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
-import axios from "axios";
 import {Link, Redirect} from "react-router-dom"
 
 class  HomePage extends Component  {
   constructor(){
-    super(); 
+    super();
   }
 
 
   render(){
     return (
-      <div>
-         
-        <Link to="/dogs/MaleList"><button >Male</button> </Link>
-        <Link to="/dogs/FemaleList"><button >Female</button> </Link>
+      <div className="homepage">
+       <div className="homepage-links">
+        <Link to="/dogs/MaleList"><button className="main-button-male" >Male</button> </Link>
+        <Link to="/dogs/FemaleList"><button className="main-button-female" >Female</button> </Link>
+       </div>
       </div>
     );
   }

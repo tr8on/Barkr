@@ -1,33 +1,148 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+}
+#main {
   display: flex;
-  flex-direction: column;
+  min-height: calc(100vh - 30vh);
+}
+#main > article {
+  flex: 1;
+}
+#main > aside2,
+#main > aside {
+  flex: 0 0 5vw;
+  background: #2b1307;
+}
+#main > aside2 {
+  order: -1;
+}
+header, footer, article, aside2, aside {
+  padding: 0;
+}
+header, footer {
+  background: white;
+  height: 20vh;
+}
+aside2{
+background: #8A6343;
+}
+
+
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: #af5c0d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: white;
+}
+.dog-icon{
+  display:inline;
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 50px;
+}
+.small-paragraph {
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: start;
+  align-self: auto;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+.footer-link {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: rgba(29, 31, 46, 0.7);
+  font-size: 14px;
+  line-height: 22px;
+  flex-direction: row;
+
+}
+
+.footer-link:hover {
+  color: #a25f4b;
+}
+.homepage{
+  background-image:url("./Images/dog_paw_lies_112849_3840x2160.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.main-button-male {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #0e0e53;
+  border: none;
+
+  box-shadow: 0 1px #999;
 }
 
-.App-link {
-  color: #61dafb;
+.main-button-male:hover {background-color: #1b1ba9
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-button-male:active {
+  background-color: #a4a7af;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.main-button-female {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff1cb1;
+  border: none;
+
+}
+
+.main-button-female:hover {background-color: #ff0dde
+}
+
+.main-button-female:active {
+  background-color: #a4a7af;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
