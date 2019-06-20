@@ -180,3 +180,11 @@ label {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+.header-headline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.big-paragraph{
+
+}
