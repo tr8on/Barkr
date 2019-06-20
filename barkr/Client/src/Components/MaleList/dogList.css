@@ -51,8 +51,9 @@
     border: 2px outset #1d1204;
    }
 
-   img{
+   .profile-img{
      max-width:100%;
+     height: 150px;
    }
    
    
@@ -68,4 +69,10 @@
 .row{
   display: flex;
   flex-wrap: wrap;
+}
+.register{
+  display: flex;
+  flex-direction: row;
+  align-items:top;
+  justify-content: space-evenly;
 }

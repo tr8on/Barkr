@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
 import axios from "axios";
+import {Link} from "react-router-dom"
 
 class DogBox extends Component{
     constructor(props){
@@ -34,8 +35,8 @@ class DogBox extends Component{
 				// 	</div>  
 					
                 // </div> 
-                <div className="box">
-                    <img src={this.state.dogPic}/>
+                <div onClick={<Link key={this.props.id} to={`/dog/${this.props.id}`}></Link>}className="box">
+                    <img className="profile-img" src={this.state.dogPic}/>
                     <h1>{this.props.name} , {this.props.age}</h1> 
                     <h3>{this.props.breed}</h3> 
                 </div>

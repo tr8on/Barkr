@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import {Link} from "react-router-dom"
+import "../MaleList/dogList.css"
+import Box from "../DogBox/index"
+import ShowDogList from '../ShowDogList';
+import ShowDogProfile from '../showDogProfile';
 
 class  FemaleList extends Component  {
-  constructor(){
-    super(); 
+  constructor(props){
+    super(props); 
     this.state = {
       dogsToShow: [],
+      img: ''
     }
   }
   async componentDidMount(){
@@ -16,18 +21,26 @@ class  FemaleList extends Component  {
     this.setState({
       dogsToShow: dogsToShow
     })
+
+
   }
 
 
   render(){
-    return (<div> 
-    <div> 
-      {this.state.dogsToShow.map((dog)=>{
-        return <Link key={dog.id} to={`/dog/${dog.id}`}> <div>{dog.name}</div> <div></div></Link>
-      })}
+
+   
+
+    return (
+      <div className="container">
+        <br></br>
+        <br></br><br></br>
+       <div className="register"><Link to='dog/create'> Register A Dog </Link></div>
+      <div className="row">
+          {this.state.dogsToShow.map ( (dog) => (
+            <div className="box-container"><Box name={dog.name} breed={dog.breed} age={dog.age}></Box></div>
+          ))}
       </div>
-      <Link to='dog/create'> Register A Dog </Link>
-      </div>
+</div>
     );
   }
 }
