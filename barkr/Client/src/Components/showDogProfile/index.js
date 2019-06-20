@@ -40,6 +40,7 @@ class  ShowDogProfile extends Component  {
   render(){
     const doggyToShow = this.state.doggyToShow;
     return (
+      <div className="container">
       <div> 
         {this.state.redirect ? <Redirect to='/dogs' /> : null}
         <div> Name: {doggyToShow.name}</div>
@@ -53,6 +54,7 @@ class  ShowDogProfile extends Component  {
 
               
       </div>
+    </div>
     );
   }
 }

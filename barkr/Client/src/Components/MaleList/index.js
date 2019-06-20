@@ -28,16 +28,20 @@ class  MaleList extends Component  {
   render(){
 
      return (
-      
-      
+       
+
       <div className="container">
-        <div className="register"><button><Link to='dog/create'> <img src="https://img.icons8.com/ios/50/000000/plus-filled.png"/></Link></button></div>
+        <div className="register"><button className="add"><Link to='/dog/create'> <img src="https://img.icons8.com/ios/50/000000/plus-filled.png"/></Link></button></div>
+
         <div className="row">
           {this.state.dogsToShow.map ( (dog) => (
-            <div  onClick={<Link key={dog.id} to={`/dog/${dog.id}`}></Link>}><Box name={dog.name} id={dog.id} breed={dog.breed} age={dog.age}></Box></div>
+            <Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
+            <Box name={dog.name} breed={dog.breed} age={dog.age}></Box>
+            </Link>
           ))}
       </div>
             </div>
+            
     );
   }
 }
