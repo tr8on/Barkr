@@ -46,13 +46,15 @@ class  MaleList extends Component  {
        <div className="register"><Link to='dog/create'> Register A Dog </Link></div>
       <div className="row">
           {this.state.dogsToShow.map ( (dog) => (
-            <div  onClick={<Link key={dog.id} to={`/dog/${dog.id}`}></Link>}><Box name={dog.name} id={dog.id} breed={dog.breed} age={dog.age}></Box></div>
+            <Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
+              <Box name={dog.name} id={dog.id} breed={dog.breed} age={dog.age}></Box>
+            </Link>
           ))}
       </div>
 </div>
     );
   }
-}
+} 
 
 
 export default MaleList;
