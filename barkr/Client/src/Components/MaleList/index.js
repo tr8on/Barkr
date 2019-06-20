@@ -27,22 +27,20 @@ class  MaleList extends Component  {
 
   render(){
 
-    return (
+     return (
+      
+      
       <div className="container">
-        <br></br>
-        <br></br>
-        <br></br>
-       <div className="register"><Link to='dog/create'> Register A Dog </Link></div>
-       <div className="row">
+        <div className="register"><button><Link to='dog/create'> <img src="https://img.icons8.com/ios/50/000000/plus-filled.png"/></Link></button></div>
+        <div className="row">
           {this.state.dogsToShow.map ( (dog) => (
-          <Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
-            <Box name={dog.name} id={dog.id} breed={dog.breed} age={dog.age}></Box>
-          </Link>
+            <div  onClick={<Link key={dog.id} to={`/dog/${dog.id}`}></Link>}><Box name={dog.name} id={dog.id} breed={dog.breed} age={dog.age}></Box></div>
           ))}
-       </div>
       </div>
+            </div>
     );
   }
-} 
+}
+
 
 export default MaleList;
