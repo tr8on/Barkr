@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 
 class  MaleList extends Component  {
   constructor(){
-    super(); 
+    super();
     this.state = {
       dogsToShow: [],
     }
@@ -20,13 +20,13 @@ class  MaleList extends Component  {
 
 
   render(){
-    return (<div> 
-    <div> 
+    return (<div>
+    <div>
       {this.state.dogsToShow.map((dog)=>{
         return <Link key={dog.id} to={`/dog/${dog.id}`}> <div>{dog.name}</div></Link>
       })}
       </div>
-      <Link to='dog/create'> Register A Dog </Link>
+      <Link to='/dog/create'> Register A Dog </Link>
       </div>
     );
   }
