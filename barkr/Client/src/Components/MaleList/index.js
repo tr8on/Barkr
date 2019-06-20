@@ -3,8 +3,7 @@ import axios from "axios";
 import {Link} from "react-router-dom"
 import "./dogList.css"
 import Box from "../DogBox/index"
-import ShowDogList from '../ShowDogList';
-import ShowDogProfile from '../showDogProfile';
+
 
 class  MaleList extends Component  {
 
@@ -24,22 +23,11 @@ class  MaleList extends Component  {
       dogsToShow: dogsToShow
     })
 
-  //   const apiRes = await axios.get(`https://dog.ceo/api/breed/${this.state.dogsToShow.dog.breed.toLowerCase()}/images/random`)
-  // const dogPic = apiRes.data.message
-  // console.log(dogPic)
-  // this.setState({
-  //   img: dogPic
-  // })
-  // console.log(apiRes)
-
   }
-
 
   render(){
 
-   
-
-    return (
+     return (
       
       
       <div className="container">
