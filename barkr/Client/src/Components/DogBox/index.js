@@ -35,7 +35,9 @@ class DogBox extends Component{
 				// 	</div>  
 					
                 // </div> 
-                <div onClick={<Link key={this.props.id} to={`/dog/${this.props.id}`}></Link>}className="box">
+                <div 
+                
+                className="box">
                     <img className="profile-img" src={this.state.dogPic}/>
                     <h1>{this.props.name} , {this.props.age}</h1> 
                     <h3>{this.props.breed}</h3> 
