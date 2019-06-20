@@ -5,7 +5,6 @@ import "./dogList.css"
 import Box from "../DogBox/index"
 import ShowDogList from '../ShowDogList';
 import ShowDogProfile from '../showDogProfile';
-// const MaleList = require('bootstrap')
 
 class  MaleList extends Component  {
 
@@ -42,12 +41,14 @@ class  MaleList extends Component  {
 
     return (
       <div className="container">
+        <br></br>
+        <br></br><br></br>
+       <div className="register"><Link to='dog/create'> Register A Dog </Link></div>
       <div className="row">
           {this.state.dogsToShow.map ( (dog) => (
-            <div className="box-container"><Box name={dog.name} breed={dog.breed} age={dog.age}></Box></div>
+            <div className="box-container" onClick={<Link key={dog.id} to={`/dog/${dog.id}`}> <Box name={dog.name} id={dog.id} breed={dog.breed} age={dog.age}></Box></Link>}></div>
           ))}
       </div>
-  <Link to='dog/create'> Register A Dog </Link>
 </div>
     );
   }
