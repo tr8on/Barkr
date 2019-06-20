@@ -19,6 +19,8 @@ class CreateDogProfile extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleGender = this.handleGender.bind(this);
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setOwner = this.setOwner.bind(this);
   }
@@ -30,7 +32,7 @@ class CreateDogProfile extends Component {
     });
   }
   setOwner(event) {
-    console.log(event.currentTarget.value)
+    console.log(event.currentTarget.value);
     this.setState({
       owner_id: event.currentTarget.value
     });
@@ -43,18 +45,27 @@ class CreateDogProfile extends Component {
       [name]: value
     });
   }
+  handleGender(event){
+    const value = event.target.value;
+    this.setState({
+      gender: value
+    })
+  }
 
   async handleSubmit(event) {
     event.preventDefault();
 
-    await axios.post(`http://localhost:4567/dogs/owner/${this.state.owner_id}`, {
-      name: this.state.name,
-      description: this.state.description,
-      breed: this.state.breed,
-      gender: this.state.gender,
-      zipcode: this.state.zipcode,
-      age: this.state.age,
-    });
+    await axios.post(
+      `http://localhost:4567/dogs/owner/${this.state.owner_id}`,
+      {
+        name: this.state.name,
+        description: this.state.description,
+        breed: this.state.breed,
+        gender: this.state.gender,
+        zipcode: this.state.zipcode,
+        age: this.state.age
+      }
+    );
     this.setState({
       redirect: true
     });
@@ -87,12 +98,16 @@ class CreateDogProfile extends Component {
             value={this.state.description}
           />
           <br />
-          <input
+          <select onChange={this.handleGender}>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          {/* <input
             name="gender"
             type="text"
             placeholder="give it a gender"
             value={this.state.gender}
-          />
+          /> */}
           <br />
           <input
             name="breed"
