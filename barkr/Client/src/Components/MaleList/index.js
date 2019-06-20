@@ -6,6 +6,7 @@ import Box from "../DogBox/index"
 // const MaleList = require('bootstrap')
 
 class  MaleList extends Component  {
+
   constructor(props){
     super(props); 
     this.state = {
