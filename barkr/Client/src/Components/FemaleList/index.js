@@ -16,7 +16,6 @@ class  FemaleList extends Component  {
     this.setState({
       dogsToShow: dogsToShow
     })
-    console.log('female')
   }
 
 
@@ -24,7 +23,7 @@ class  FemaleList extends Component  {
     return (<div> 
     <div> 
       {this.state.dogsToShow.map((dog)=>{
-        return <Link key={dog.id} to={`/dog/${dog.id}`}> <div>{dog.name}</div></Link>
+        return <Link key={dog.id} to={`/dog/${dog.id}`}> <div>{dog.name}</div> <div></div></Link>
       })}
       </div>
       <Link to='dog/create'> Register A Dog </Link>

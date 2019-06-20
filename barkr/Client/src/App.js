@@ -24,7 +24,7 @@ class App extends Component {
       </header>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/Dogs/" component={ShowDogList} />
+          <Route exact path="/Dog/" component={ShowDogList} />
           <Route exact path="/Dog/create" component={CreateDogProfile} />
           <Route exact path="/Dogs/MaleList" component={MaleList} />
           <Route exact path="/Dogs/FemaleList" component={FemaleList} />
