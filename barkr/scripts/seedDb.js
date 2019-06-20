@@ -20,7 +20,7 @@ const main = async () => {
 		name: "Kyrus",
 		zipcode: "07806",
 		age: 13,
-		breed: "Mini Pinscher",
+		breed: "Terrier",
 		gender: "Male",
 		description:"Loves kisses on his neck"
 	});
