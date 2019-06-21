@@ -113,4 +113,7 @@ we found an API that required no key with unlimited calling.
 
 #### Making Something Clickable
 **ERROR**: We were trying to make our entire 'dog box' clickable and have the dog name not look like a link.                               
-**RESOLUTION**: We were wrapping the code with Link and onClick. Removing onClick fixed our problem and inserting textDecoration fixed our problem. Correct code -> <Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
+**RESOLUTION**: We were wrapping the code with Link and onClick. Removing onClick fixed our problem and inserting textDecoration fixed our problem. Correct code -> 
+````
+<Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
+````
