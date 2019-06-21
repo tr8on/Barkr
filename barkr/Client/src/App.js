@@ -46,7 +46,7 @@ class App extends Component {
             <a href="https://www.instagram.com/" target="_blank" className="footer-link">Instagram</a>
             <a href="https://www.pinterest.com/" target="_blank" className="footer-link">Pinterest</a>
             <a href="https://twitter.com/" target="_blank" className="footer-link">Twitter</a>
-            <div  className="label cc-footer-section-headline w-inline-block">Contact Us</div>
+            <div  className="label2">Contact Us</div>
             <div className="footer-grid-column"><p className="small-paragraph">We’re Always Happy to
               Help</p><a href="barkr:us@coffeestyle.io" className="footer-email-link">BarkR@Doge.io</a></div>
             </footer>
