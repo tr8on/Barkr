@@ -59,7 +59,7 @@ https://res.cloudinary.com/rubenvelez23/image/upload/v1560739947/IMG_5232_xgyvn8
 | Owner profile | H | 5hrs| ??? |
 | About page | H | 5hrs| 3hrs |
 | Extra Styling | H | 3hrs| 2hrs  |
-| Total | H | 48hrs| ??? | 
+| Total | H | 48hrs| 39.50hrs | 
 
 #### MVP:
 - Backend Routes !COMPLETED!
