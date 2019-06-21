@@ -7,7 +7,7 @@
 |Day 1: Friday, June 14| Project Description / Wireframes / Priority Matrix / Functional Components | Complete
 |Day 2: Monday, June 17| Database and Tables / Render Data  | Complete
 |Day 3: Tuesday, June 18| Render Data onto Each Component | Complete
-|Day 4: Wednesday, June 19| Create a functional Homepage / Styling | Incomplete
+|Day 4: Wednesday, June 19| Create a functional Homepage / Styling | Complete
 |Day 5: Thursday, June 20| Post MVP  | Incomplete
 |Day 6: Friday June 21| Present | Incomplete
 
@@ -53,19 +53,20 @@ https://res.cloudinary.com/rubenvelez23/image/upload/v1560739947/IMG_5232_xgyvn8
 | Creation of Owner and Dog Tables | H | 5hrs| 5hrs |
 | Test CRUD using Postman | H | 1hrs| 30min |
 | Debug backend | H | 2hrs| 1hr |
-| Functional Home page | H | 5hrs| ??? |
-| Doggy list | H | 5hrs| ??? |
-| Doggy profile | H | 5hrs| ??? |
+| Functional Home page | H | 5hrs| 8hrs |
+| Doggy list | H | 5hrs| 12hrs |
+| Doggy profile | H | 5hrs| 6hrs |
 | Owner profile | H | 5hrs| ??? |
-| About page | H | 5hrs| ??? |
-| Styling | H | 15hrs| ??? |
-| Total | H | 48hrs| ??? | 
+| About page | H | 5hrs| 3hrs |
+| Extra Styling | H | 3hrs| 2hrs  |
+| Deployment | H | 1hr| 4hrs |
+| Total | H | 49hrs| 43.50hrs | 
 
 #### MVP:
 - Backend Routes !COMPLETED!
 - Database with two tables (dogs and owners) !COMPLETED!
-- HomePage
-- DogList
+- HomePage !COMPLETED!
+- DogList !COMPLETED!
 - Dog Profile !COMPLETED!
 - Register Dog !COMPLETED!
 - Update Dog !COMPLETED!
@@ -81,48 +82,39 @@ https://res.cloudinary.com/rubenvelez23/image/upload/v1560739947/IMG_5232_xgyvn8
 
 ------------------------------------------------------
 
-# BEYOND THIS POINT WILL BE FILLED OUT DURING PROJECT WEEK...
-
 ## Helper Functions
 
-
-#### SAMPLE.....
-| Function | Description | 
-| --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string of text | 
-
-## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
- 
- #### SAMPLE.....
-| Library | What it Does | 
-| --- | :---: |  
-| Bootstrap | Used to help style my application | 
-| Giphy API | Used to get gifs to use | 
-
+...
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
-#### SAMPLE.....
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+#### Dog API
 
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+we found an API that required no key with unlimited calling.
 
-#### SAMPLE.....
+    async componentDidMount(){
+        const apiRes = await axios.get(`https://dog.ceo/api/breed/${this.props.breed.toLowerCase()}/images/random`)
+                const dogPic = apiRes.data.message
+                console.log(dogPic)
+                this.setState({
+                    dogPic:dogPic
+                }) 
+    };
+
+## Change Log 
+
+#### Zipcode Filter
 | Original Plan | Outcome | 
 | --- | :---: |  
-| Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated | 
+| Filter dogs by gender && zipcode | We left out the zipcode filter because we really wanted to focus on perfecting other more important functionalities and CSS.  | 
 
-## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+## Issues and Resolutions 
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+#### Making Something Clickable
+**ERROR**: We were trying to make our entire 'dog box' clickable and have the dog name not look like a link.                               
+**RESOLUTION**: We were wrapping the code with Link and onClick. Removing onClick fixed our problem and inserting textDecoration fixed our problem. Correct code -> 
+````
+<Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
+````

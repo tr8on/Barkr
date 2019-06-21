@@ -17,7 +17,7 @@ class App extends Component {
         <BrowserRouter>
         <header>
           <ul>
-            <img className="dog-icon" src={DogIcon} alt=""/>
+            <Link  to=""><img className="dog-icon" src={DogIcon} alt="/"/></Link>
             <li><a className="active"><Link  to="/About">About</Link></a></li>
             <li><a className="active"><Link  to="">Home</Link></a></li>
           </ul>
@@ -39,19 +39,18 @@ class App extends Component {
             <aside></aside>
           </div>
           <footer>
-            <p className="small-paragraph">BarkR<br/>Finding Love For Our Little Friends.</p>
-            <p className="small-paragraph cc-copyright-footer">BarkR Inc. © 2019</p>
-            <a href="https://www.facebook.com/"
-               target="_blank"
-               className="footer-link">Facebook</a>
+            <p className="small-paragraph">Finding Love For Our Little Friends.</p>
+            <p className="small-paragraph">BarkR Inc. © 2019</p>
+            <br/>
+            <a href="https://www.facebook.com/" target="_blank" className="footer-link">Facebook</a>
             <a href="https://www.instagram.com/" target="_blank" className="footer-link">Instagram</a>
             <a href="https://www.pinterest.com/" target="_blank" className="footer-link">Pinterest</a>
             <a href="https://twitter.com/" target="_blank" className="footer-link">Twitter</a>
-            <div  className="label cc-footer-section-headline w-inline-block">Contact Us</div>
+            <div  className="label2">Contact Us</div>
             <div className="footer-grid-column"><p className="small-paragraph">We’re Always Happy to
               Help</p><a href="barkr:us@coffeestyle.io" className="footer-email-link">BarkR@Doge.io</a></div>
             </footer>
-        </BrowserRouter>
+        </BrowserRouter>`
       </div>
     );
   }
