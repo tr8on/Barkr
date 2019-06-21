@@ -39,11 +39,10 @@ class App extends Component {
             <aside></aside>
           </div>
           <footer>
-            <p className="small-paragraph">BarkR<br/>Finding Love For Our Little Friends.</p>
-            <p className="small-paragraph cc-copyright-footer">BarkR Inc. © 2019</p>
-            <a href="https://www.facebook.com/"
-               target="_blank"
-               className="footer-link">Facebook</a>
+            <p className="small-paragraph">Finding Love For Our Little Friends.</p>
+            <p className="small-paragraph">BarkR Inc. © 2019</p>
+            <br/>
+            <a href="https://www.facebook.com/" target="_blank" className="footer-link">Facebook</a>
             <a href="https://www.instagram.com/" target="_blank" className="footer-link">Instagram</a>
             <a href="https://www.pinterest.com/" target="_blank" className="footer-link">Pinterest</a>
             <a href="https://twitter.com/" target="_blank" className="footer-link">Twitter</a>
