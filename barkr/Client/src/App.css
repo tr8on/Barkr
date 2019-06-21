@@ -33,7 +33,7 @@ header, footer, article, aside2, aside {
 
 header, footer {
     background: white;
-    height: 13vh;
+    height: 15vh;
 }
 
 header {
@@ -43,7 +43,7 @@ header {
 }
 
 article {
-    padding-top: 60px;
+    padding-top: 70px;
     background-color: burlywood;
 }
 
@@ -354,21 +354,31 @@ footer {
 .dog-profile{
     background-color: #666666;
     margin-left: 20%;
-    width: 600px;
+    width: 800px;
+
 
 
 }
 .dog-pic{
+    margin-top: 5%;
     margin-left: 10%;
-    max-height: 600px;
-    max-width: 600px;
+    height: 400px;
+    width: 600px;
 }
 .info-dog{
     margin-left: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 10px;
 }
 .edited{
     margin-top: 10%;
     margin-left: 40%;
     width: 200px;
 }
+.register{
+    margin-top: 5%;
+    width: 200px;
+    height: 50px;
+    opacity: 1;
+    background-color: transparent;
+}
+
