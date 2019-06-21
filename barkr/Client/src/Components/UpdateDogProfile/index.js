@@ -4,7 +4,7 @@ import {Redirect} from "react-router-dom"
 
 class  CreateDogProfile extends Component  {
   constructor(){
-    super(); 
+    super();
     this.state = {
         name: "",
         breed: "",
@@ -36,7 +36,7 @@ class  CreateDogProfile extends Component  {
         const value = event.target.value;
         this.setState({
           [name]: value
-        })    
+        })
       }
     
       async handleSubmit(event){
@@ -57,12 +57,14 @@ class  CreateDogProfile extends Component  {
     
       render(){
         return (
-          <div> 
+          <div>
+            <div className="edited">
             {this.state.redirect ? <Redirect to={`/dog/${this.props.match.params.id}`}/>: null}
-            <form 
-            onChange={this.handleChange} 
+            <form
+            onChange={this.handleChange}
             onSubmit={this.handleSubmit}
             >
+              <h2>Edited Dog</h2>
               <input
               
                 name="name"
@@ -111,6 +113,7 @@ class  CreateDogProfile extends Component  {
     
               
             </form>
+            </div>
           </div>
         );
       }
