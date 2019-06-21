@@ -15,7 +15,7 @@ class MaleList extends Component {
 	}
 	
 	async componentDidMount () {
-		const res = await axios.get ( `http://localhost:4567/dogs/Male` )
+		const res = await axios.get(`/dogs/Male`)
 		const dogsToShow = res.data.dogs;
 		console.log(dogsToShow)
 		this.setState ( {
@@ -45,6 +45,7 @@ class MaleList extends Component {
 		
 		);
 	}
+
 }
 
 

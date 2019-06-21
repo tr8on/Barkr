@@ -1,4 +1,4 @@
-const { Dog , Owner } = require ( "../models/models" );
+const { Dog , Owner } = require ( "../Models/models" );
 
 const main = async () => {
 	await Dog.destroy ( {

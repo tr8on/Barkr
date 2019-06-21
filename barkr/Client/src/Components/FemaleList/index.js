@@ -5,6 +5,7 @@ import "../MaleList/dogList.css"
 import Box from "../DogBox/index"
 
 
+
 class FemaleList extends Component {
 	constructor ( props ) {
 		super ( props );
@@ -14,7 +15,7 @@ class FemaleList extends Component {
 	}
 	
 	async componentDidMount () {
-		const res = await axios.get ( `http://localhost:4567/dogs/Female` )
+		const res = await axios.get ( `/dogs/Female` )
 		const dogsToShow = res.data.dogs;
 		this.setState ( {
 			dogsToShow : dogsToShow
@@ -36,6 +37,7 @@ class FemaleList extends Component {
 			</div>
 		</div> );
 	}
+
 }
 
 

@@ -14,7 +14,7 @@ class ShowDogProfile extends Component {
 	}
 	
 	async componentDidMount () {
-		const res = await axios.get ( `http://localhost:4567/dogs/${ this.props.match.params.id }` )
+		const res = await axios.get(`/dogs/${this.props.match.params.id}`)
 		const dog = res.data.dog
 		this.setState ( {
 			doggyToShow : dog
@@ -29,7 +29,7 @@ class ShowDogProfile extends Component {
 			img : dogPic
 		} )
 		
-		const ownres = await axios.get ( `http://localhost:4567/dogs/owner/${ this.state.doggyToShow.owner_id}` )
+		const ownres = await axios.get ( `/dogs/owner/${ this.state.doggyToShow.owner_id}` )
 		const owndog = ownres.data.owner
 		console.log(owndog)
 		this.setState ( {
@@ -45,7 +45,7 @@ class ShowDogProfile extends Component {
 	
 	
 	async handleDelete () {
-		await axios.delete ( `http://localhost:4567/dogs/${ this.props.match.params.id }` )
+		await axios.delete(`/dogs/${this.props.match.params.id}`)
 		this.setState ( {
 			redirect : true
 		} )
@@ -84,6 +84,7 @@ class ShowDogProfile extends Component {
 			</div>
 		</div> );
 	}
+
 }
 
 

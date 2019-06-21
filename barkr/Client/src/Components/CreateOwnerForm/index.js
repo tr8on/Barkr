@@ -2,6 +2,7 @@ import React , { Component } from 'react'
 import axios from 'axios'
 
 class CreateOwnerFrom extends Component {
+
 	constructor () {
 		super ()
 		this.state = {
@@ -12,7 +13,7 @@ class CreateOwnerFrom extends Component {
 	}
 	
 	async componentDidMount () {
-		const res = await axios.get ( 'http://localhost:4567/dogs/owners' )
+		const res = await axios.get ( '/dogs/owners' )
 		const ownerArray = res.data.owner
 		this.setState ( {
 			ownerArray : ownerArray
@@ -37,6 +38,7 @@ class CreateOwnerFrom extends Component {
 		</div> )
 	}
 	
+
 }
 
 export default CreateOwnerFrom

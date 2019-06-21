@@ -2,6 +2,7 @@ import React , { Component } from 'react';
 import axios from "axios";
 import { Redirect } from "react-router-dom"
 
+
 class CreateDogProfile extends Component {
 	constructor () {
 		super ();
@@ -21,7 +22,7 @@ class CreateDogProfile extends Component {
 	}
 	
 	async componentDidMount () {
-		const res = await axios.get ( `http://localhost:4567/dogs/${ this.props.match.params.id }` )
+		const res = await axios.get(`/dogs/${this.props.match.params.id}`)
 		const dogs = res.data.dog;
 		this.setState ( {
 			name : this.state.name ,
@@ -44,7 +45,7 @@ class CreateDogProfile extends Component {
 	async handleSubmit ( event ) {
 		event.preventDefault ();
 		
-		await axios.put ( `http://localhost:4567/dogs/${ this.props.match.params.id }` , {
+		await axios.put ( `/dogs/${ this.props.match.params.id }` , {
 			name : this.state.name ,
 			description : this.state.description ,
 			breed : this.state.breed ,
@@ -118,6 +119,7 @@ class CreateDogProfile extends Component {
 			</div> );
 	}
 }
+
 
 
 export default CreateDogProfile;

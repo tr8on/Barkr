@@ -2,6 +2,7 @@ import React , { Component } from 'react';
 import axios from "axios";
 import { Link } from "react-router-dom"
 
+
 class ShowDogList extends Component {
 	constructor () {
 		super ();
@@ -11,7 +12,7 @@ class ShowDogList extends Component {
 	}
 	
 	async componentDidMount () {
-		const res = await axios.get ( 'http://localhost:4567/dogs' )
+		const res = await axios.get('/dogs')
 		const dogsToShow = res.data.dogs;
 		this.setState ( {
 			dogsToShow : dogsToShow
@@ -31,6 +32,7 @@ class ShowDogList extends Component {
 			<Link to='dog/create'> Register A Dog </Link>
 		</div> );
 	}
+
 }
 
 
