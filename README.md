@@ -83,24 +83,13 @@ https://res.cloudinary.com/rubenvelez23/image/upload/v1560739947/IMG_5232_xgyvn8
 
 ## Helper Functions
 
-
-#### SAMPLE.....
-| Function | Description | 
-| --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string of text | 
- 
- #### SAMPLE.....
-| Library | What it Does | 
-| --- | :---: |  
-| Bootstrap | Used to help style my application | 
-| Giphy API | Used to get gifs to use | 
-
+...
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
-#### SAMPLE.....
+#### Dog API
 
 we found an API that required no key with unlimited calling.
 
@@ -115,13 +104,13 @@ we found an API that required no key with unlimited calling.
 
 ## Change Log 
 
-#### SAMPLE.....
+#### Zipcode Filter
 | Original Plan | Outcome | 
 | --- | :---: |  
 | Filter dogs by gender && zipcode | We left out the zipcode filter because we really wanted to focus on perfecting other more important functionalities and CSS.  | 
 
 ## Issues and Resolutions 
 
-#### SAMPLE.....
+#### Making Something Clickable
 **ERROR**: We were trying to make our entire 'dog box' clickable and have the dog name not look like a link.                               
 **RESOLUTION**: We were wrapping the code with Link and onClick. Removing onClick fixed our problem and inserting textDecoration fixed our problem. Correct code -> <Link style={{ textDecoration: 'none' }} key={dog.id} to={`/dog/${dog.id}`}>
