@@ -73,7 +73,8 @@ class CreateDogProfile extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container1">
+        <div className="container2">
       <div>
         <div>
           <select value={this.state.currentOwner} onChange={this.setOwner}>
@@ -83,7 +84,7 @@ class CreateDogProfile extends Component {
             })}
           </select>
         </div>
-        {this.state.redirect ? <Redirect to="/dogs" /> : null}
+        {this.state.redirect ? <Redirect to="/" /> : null}
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input
             name="name"
@@ -134,6 +135,7 @@ class CreateDogProfile extends Component {
           <input type="submit" />
         </form>
       </div>
+        </div>
       </div>
     );
   }
