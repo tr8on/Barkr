@@ -17,7 +17,7 @@ class App extends Component {
         <BrowserRouter>
         <header>
           <ul>
-            <img className="dog-icon" src={DogIcon} alt=""/>
+            <Link  to=""><img className="dog-icon" src={DogIcon} alt="/"/></Link>
             <li><a className="active"><Link  to="/About">About</Link></a></li>
             <li><a className="active"><Link  to="">Home</Link></a></li>
           </ul>
@@ -50,7 +50,7 @@ class App extends Component {
             <div className="footer-grid-column"><p className="small-paragraph">We’re Always Happy to
               Help</p><a href="barkr:us@coffeestyle.io" className="footer-email-link">BarkR@Doge.io</a></div>
             </footer>
-        </BrowserRouter>
+        </BrowserRouter>`
       </div>
     );
   }
